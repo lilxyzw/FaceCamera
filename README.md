@@ -5,7 +5,9 @@ Camera for checking the avatar's facial expressions.
 
 ## How to use
 
-Simply adding it to your project adds functionality to the build.
+Please install [this plugin](https://github.com/lilxyzw/lilBasisPatcher) first. After that, simply adding it to your project will incorporate the functionality into the build.
+
+This plugin is also available via the [VPM repository](https://github.com/lilxyzw/vpm-repos-basis).
 
 ## Client settings
 
