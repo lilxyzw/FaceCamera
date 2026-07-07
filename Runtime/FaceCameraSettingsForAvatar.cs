@@ -40,7 +40,7 @@ namespace jp.lilxyzw.facecamera
         private static void ApplyValue(string key, float value, float defaultValue)
         {
             AvatarSettings.Set("facecamera", key, value, defaultValue);
-            FaceCamera.UpdateUI();
+            FaceCamera.InitializeFaceCam();
         }
     }
 }
