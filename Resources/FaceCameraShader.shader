@@ -86,21 +86,20 @@ Shader "Hidden/FaceCameraShader"
                 float3 up = normalize(unity_StereoMatrixV[0]._m10_m11_m12 + unity_StereoMatrixV[1]._m10_m11_m12);
                 float3 camerapos = (unity_StereoWorldSpaceCameraPos[0] + unity_StereoWorldSpaceCameraPos[1]) * 0.5;
 
-                v.positionOS.z = 0.2;
+                v.positionOS.z = 0;
                 v.positionOS.xy = v.positionOS.xy * float2(-2,2);
                 v.positionOS.xy -= float2(_FaceCameraAnchorX, _FaceCameraAnchorY);
                 v.positionOS.xy *= _FaceCameraSizeVR;
                 v.positionOS.xy += float2(_FaceCameraAnchorX, _FaceCameraAnchorY);
                 v.positionOS.xy -= float2(_FaceCameraOffsetXVR, _FaceCameraOffsetYVR) * 2 * float2(_FaceCameraAnchorX, _FaceCameraAnchorY);
                 v.positionOS.xy /= UNITY_MATRIX_P._m00_m11;
-                v.positionOS.xy *= 0.3;
+                v.positionOS.xy *= 0.075;
                 float3 V = normalize(TransformObjectToWorld(v.positionOS.xyz) - camerapos);
 
                 right = normalize(right - V * dot(V, right));
                 up = normalize(up - V * dot(V, up));
 
                 float3 positionWS = v.positionOS.x * right + v.positionOS.y * up;
-                positionWS += 0.2 * V;
                 positionWS += TransformObjectToWorld(0);
 
                 o.positionCS = TransformWorldToHClip(positionWS);

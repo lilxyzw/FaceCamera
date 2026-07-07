@@ -47,7 +47,7 @@ namespace jp.lilxyzw.facecamera
             renderer.enabled = true;
 
             ui.transform.parent = BasisLocalCameraDriver.CameraInstance.transform;
-            ui.transform.SetLocalPositionAndRotation(Vector3.forward, Quaternion.identity);
+            ui.transform.SetLocalPositionAndRotation(Vector3.forward * 0.25f, Quaternion.identity);
 
             UpdateUI();
 

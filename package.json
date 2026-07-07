@@ -1,6 +1,6 @@
 {
   "name": "jp.lilxyzw.facecamera",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "FaceCamera",
   "description": "Camera for checking the avatar's facial expressions.",
   "license": "MIT",
